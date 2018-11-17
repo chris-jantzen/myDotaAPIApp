@@ -1,8 +1,9 @@
 language: node_js
 node_js:
   - "stable"
-email:
-  recipients:
-    - jantzeca@mail.uc.edu
-  on_success: never # default: change
-  on_failure: never # default: always
+notifications:
+  email:
+    recipients:
+      - jantzeca@mail.uc.edu
+    on_success: never # default: change
+    on_failure: never # default: always
