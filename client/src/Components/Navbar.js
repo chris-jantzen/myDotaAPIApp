@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { 
   Navbar, 
   Container,
+  Button,
   NavbarBrand,
   NavbarToggler,
   Collapse,
@@ -16,20 +17,41 @@ import {
   InputGroup,
   InputGroupAddon
 } from 'reactstrap';
+import { getPlayerByName } from '../requests';
 
 class AppNavbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      personaName: ''
     };
     this.toggle = this.toggle.bind(this);
     this.callFunction = this.callFunction.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.updateInput = this.updateInput.bind(this);
   }
 
   toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
+    });
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+    console.log(this.state.personaName);
+  }
+
+  onChange(e) {
+    e.preventDefault();
+    alert(e.target.value);
+  }
+
+  updateInput(e) {
+    e.preventDefault();
+    this.setState({
+      personaName: e.target.value
     });
   }
 
@@ -46,7 +68,10 @@ class AppNavbar extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <InputGroup>
-                <Input placeholder="Persona Name" />
+                <Input onChange={this.updateInput} type="text" placeholder="Persona Name" />
+                <InputGroupAddon addonType="append">
+                  <Button outline color="primary" onClick={this.onSubmit}>Submit</Button>
+                </InputGroupAddon>
               </InputGroup>
             </Nav>
             <Nav className="ml-auto" navbar>
