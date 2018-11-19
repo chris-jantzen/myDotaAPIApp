@@ -4,8 +4,8 @@
   "description": "Project using the open dota api",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node client/src/requests/index.js",
+    "dev": "nodemon client/src/requests/index.js",
     "test": "mocha"
   },
   "author": "Chris Jantzen",
