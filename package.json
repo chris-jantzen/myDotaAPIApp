@@ -11,8 +11,6 @@
   "author": "Chris Jantzen",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
-    "react": "^16.6.0"
   },
   "devDependencies": {
     "mocha": "^5.2.0",

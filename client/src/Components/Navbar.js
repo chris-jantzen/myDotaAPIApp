@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { 
   Navbar, 
-  Container,
+  // Container,
   Button,
   NavbarBrand,
   NavbarToggler,
@@ -32,7 +32,7 @@ class AppNavbar extends Component {
     this.updateInput = this.updateInput.bind(this);
   }
 
-  toggle = () => {
+  toggle () {
     this.setState({
       isOpen: !this.state.isOpen
     });
