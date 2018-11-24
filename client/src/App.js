@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AppNavbar from './Components/Navbar';
+import BodyForm from './Components/BodyForm';
 import './App.css';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <AppNavbar />
+        <BodyForm />
       </div>
     );
   }
