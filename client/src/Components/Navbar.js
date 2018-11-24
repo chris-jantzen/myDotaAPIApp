@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { 
   Navbar, 
-  // Container,
+  Container,
   Button,
   NavbarBrand,
   NavbarToggler,

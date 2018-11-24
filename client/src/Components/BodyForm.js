@@ -26,4 +26,4 @@ export class BodyForm extends Component {
   }
 }
 
-export default BodyForm
+export default BodyForm;

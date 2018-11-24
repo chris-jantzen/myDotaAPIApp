@@ -4,7 +4,7 @@ const baseUrl = require('./config').baseUrl;
 /**
  * params: persona name (string)
  */
-function getPlayerByName(name) {
+const getPlayerByName = name => {
   axios.get('search', {
     baseURL: baseUrl,
     params: {
