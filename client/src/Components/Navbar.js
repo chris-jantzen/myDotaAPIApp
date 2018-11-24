@@ -17,7 +17,7 @@ import {
   InputGroup,
   InputGroupAddon
 } from 'reactstrap';
-import { getPlayerByName } from '../requests';
+// import { getPlayerByName } from '../requests';
 
 class AppNavbar extends Component {
   constructor(props) {
