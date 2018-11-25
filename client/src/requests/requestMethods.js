@@ -12,6 +12,9 @@ const getPlayerByName = name => {
     }
   }).then(res => {
     console.log(res);
+    // for (let i of res.data[0]) {
+    //   console.log(i.avatarfull); // how to index into the picture to be used for the FindByPersonaName component
+    // }
   }).catch(err => {
     console.log(err.message);
   });
