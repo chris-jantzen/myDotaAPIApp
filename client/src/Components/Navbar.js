@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { 
   Navbar, 
-  Container,
+  // Container,
   Button,
   NavbarBrand,
   NavbarToggler,
@@ -17,7 +17,7 @@ import {
   InputGroup,
   InputGroupAddon
 } from 'reactstrap';
-// import { getPlayerByName } from '../requests';
+// const getPlayerByName = require('../requests/requestMethods');
 
 class AppNavbar extends Component {
   constructor(props) {
@@ -40,7 +40,10 @@ class AppNavbar extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    console.log(this.state.personaName);
+    // let res = getPlayerByName(this.state.personaName);
+    let res = {testData: 'test data so I don\'t have to send so much'}
+    console.log('navbar level', res);
+    this.props.sendData(res);
   }
 
   onChange(e) {

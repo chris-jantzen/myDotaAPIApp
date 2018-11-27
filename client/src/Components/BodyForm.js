@@ -8,6 +8,10 @@ export class BodyForm extends Component {
       step: 1,
     }
   }
+
+  handlePersonaData(data) {
+    console.log(data.data);
+  }
   render() {
     switch(this.state.step) {
       case 1:
