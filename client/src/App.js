@@ -12,6 +12,10 @@ class App extends Component {
     this.handleData = this.handleData.bind(this);
   }
 
+  componentWillUpdate() {
+    // maybe use this. Idk
+  }
+
   handleData(data) {
     this.setState({
       data
