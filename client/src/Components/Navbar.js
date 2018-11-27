@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { 
   Navbar, 
-  Container,
+  // Container,
   Button,
   NavbarBrand,
   NavbarToggler,
@@ -17,7 +17,7 @@ import {
   InputGroup,
   InputGroupAddon
 } from 'reactstrap';
-const getPlayerByName = require('../requests/requestMethods');
+// const getPlayerByName = require('../requests/requestMethods');
 
 class AppNavbar extends Component {
   constructor(props) {
