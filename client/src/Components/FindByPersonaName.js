@@ -10,8 +10,10 @@ class FindByPersonaName extends Component {
         'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png',
         'https://i.ytimg.com/vi/tYBk4kLHPkk/maxresdefault.jpg'
       ],
+      data: props.data,
       pic: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png'
     };
+    console.log(this.state.data);
     this.nextPic = this.nextPic.bind(this);
     this.prevPic = this.prevPic.bind(this);
     this.correctPic = this.correctPic.bind(this);
@@ -48,7 +50,7 @@ class FindByPersonaName extends Component {
   render() {
     return (
       <div style={{'margin': 100}}> {/* figure out how to make it dynamically 1/4 down the screen */}
-        <img src={this.state.pic} alt="text stuff"/>
+        <img style={{'maxWidth': 500, 'height': 'auto'}} src={this.state.pic} alt="text stuff"/>
         <Container>
           <Button color="primary" onClick={this.prevPic}>Back</Button>
           <Button color="success" onClick={this.correctPic}>Correct Picture?</Button>
