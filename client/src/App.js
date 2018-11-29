@@ -12,14 +12,8 @@ class App extends Component {
     this.handleData = this.handleData.bind(this);
   }
 
-  componentWillUpdate() {
-    // maybe use this. Idk
-  }
-
   handleData(data) {
-    this.setState({
-      data
-    });
+    this.setState({ data });
     console.log('app level', data);
   }
 
@@ -27,7 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <AppNavbar sendData={d => this.handleData(d)} />
-        <BodyForm data={this.state.data}/>
+        <BodyForm data={this.state.data} />
       </div>
     );
   }

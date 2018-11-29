@@ -5,29 +5,50 @@ export class BodyForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      step: 1,
+      step: 0,
+      data: {}
     }
+    this.updateState = this.updateState.bind(this);
+  }
+  
+  componentWillReceiveProps(nextProps) {
+    console.log('BodyForm level', nextProps);
+    this.updateState(nextProps.data);
   }
 
-  handlePersonaData(data) {
-    console.log(data.data);
+  updateState(newProps) {
+    this.setState({
+      step: 1,
+      data: newProps.data
+    });
   }
+
   render() {
     switch(this.state.step) {
+      case 0:
+        return (
+          <div>
+            <h1>text</h1>
+          </div>
+        )
       case 1:
         return (
           <div>
-            <FindByPersonaName />
+            <FindByPersonaName data={this.props.data} />
           </div>
         );
         default:
           return (
             <div>
-              <FindByPersonaName />
+              <h1>Hello from default. Probably shouldn't be here.</h1>
             </div>
           );
     }
   }
 }
+
+// BodyForm.defaultProps = {
+//   step: 0
+// };
 
 export default BodyForm;

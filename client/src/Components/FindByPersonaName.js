@@ -10,13 +10,24 @@ class FindByPersonaName extends Component {
         'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png',
         'https://i.ytimg.com/vi/tYBk4kLHPkk/maxresdefault.jpg'
       ],
-      data: props.data,
+      data: {},
       pic: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png'
     };
-    console.log(this.state.data);
     this.nextPic = this.nextPic.bind(this);
     this.prevPic = this.prevPic.bind(this);
     this.correctPic = this.correctPic.bind(this);
+    this.updateState = this.updateState.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log('PERSONA NAME LEVEL', nextProps);
+    this.updateState(nextProps);
+  }
+
+  updateState(newProps) {
+    this.setState({
+      data: newProps.data
+    });
   }
 
   nextPic(e) {
