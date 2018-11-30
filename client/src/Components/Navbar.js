@@ -41,7 +41,7 @@ class AppNavbar extends Component {
   onSubmit(e) {
     e.preventDefault();
     // let res = getPlayerByName(this.state.personaName);
-    let res = {testData: 'test data so I don\'t have to send so much'}
+    let res = { testData: 'test data so I don\'t have to send so much' }
     console.log('navbar level', res);
     this.props.sendData(res);
   }

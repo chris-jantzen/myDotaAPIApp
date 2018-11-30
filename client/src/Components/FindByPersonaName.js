@@ -20,6 +20,7 @@ class FindByPersonaName extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    // Learn how to debug I guess
     console.log('PERSONA NAME LEVEL', nextProps);
     this.updateState(nextProps);
   }
