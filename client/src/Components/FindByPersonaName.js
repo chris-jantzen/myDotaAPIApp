@@ -10,7 +10,7 @@ class FindByPersonaName extends Component {
         'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png',
         'https://i.ytimg.com/vi/tYBk4kLHPkk/maxresdefault.jpg'
       ],
-      data: {},
+      data: '',
       pic: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png'
     };
     this.nextPic = this.nextPic.bind(this);
@@ -19,15 +19,22 @@ class FindByPersonaName extends Component {
     this.updateState = this.updateState.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    // Learn how to debug I guess
-    console.log('PERSONA NAME LEVEL', nextProps);
-    this.updateState(nextProps);
+  static getDerivedStateFromProps(props, state) {
+    if (props !== state.props) {
+      console.log(props);
+    }
+    return props;
   }
+
+  // componentWillReceiveProps(nextProps) {
+  //   // Learn how to debug I guess
+  //   console.log('PERSONA NAME LEVEL', nextProps);
+  //   this.updateState(nextProps);
+  // }
 
   updateState(newProps) {
     this.setState({
-      data: newProps.data
+      data: newProps
     });
   }
 

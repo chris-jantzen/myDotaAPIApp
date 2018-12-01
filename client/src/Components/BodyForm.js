@@ -6,7 +6,7 @@ export class BodyForm extends Component {
     super(props);
     this.state = {
       step: 0,
-      data: {}
+      personaName: ''
     }
     this.updateState = this.updateState.bind(this);
   }
@@ -19,7 +19,7 @@ export class BodyForm extends Component {
   updateState(newProps) {
     this.setState({
       step: 1,
-      data: newProps.data
+      data: newProps
     });
   }
 
